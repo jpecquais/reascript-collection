@@ -1,0 +1,1 @@
+reaper.SetExtState("jlp_Track filter","request_focus","true",false)
