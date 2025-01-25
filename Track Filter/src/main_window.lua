@@ -23,6 +23,7 @@ function Main_Window:new()
     
     new_instance.is_focus_requested = false
     new_instance.is_open = false
+    new_instance.action_buffer = ""
 
     new_instance.modifiers = {
         items_state  = false,
@@ -109,10 +110,22 @@ function Main_Window:get_text()
     return self.text_field
 end
 
+function Main_Window:perform_action(action)
+    utils.debug(action)
+    if action == "items" then
+        self.modifiers.items_state = true
+    end
+end
+
 function Main_Window:on_text_change(text_has_change,text)
     if text_has_change then
         self.text_field = text
-        self:callback()
+        local is_action, action = self:check_string_is_command(text)
+        if is_action then
+            self.action_buffer = action
+        else 
+            self:callback()
+        end
     end
 end
 
@@ -131,9 +144,20 @@ function Main_Window:callback()
     self._callback(self.text_field)
 end
 
+function Main_Window:check_string_is_command(s)
+    local char = s:sub(1, 1)
+    local is_action, action = false, nil
+    if char == "/" then
+        is_action = true
+        action = s:sub(2,-1)
+    end
+    return is_action, action
+end
+
 function Main_Window:on_clear_button(is_button_pressed)
     if is_button_pressed then
         self:clear_filters()
+        self:clear_modifiers()
         self:callback()
     end
 end
@@ -142,8 +166,23 @@ function Main_Window:on_escape_key(is_key_down)
     if is_key_down then self:clear_filter() end
 end
 
+function Main_Window:on_enter_key(is_key_down)
+    if is_key_down then
+        utils.debug(self.action_buffer)
+        self:perform_action(self.action_buffer)
+        self:clear_filters()
+    end
+end
+
 function Main_Window:clear_filters()
     self.text_field = ""
+end
+
+function Main_Window:clear_modifiers()
+    self.modifiers.items_state = false
+    self.modifiers.solo_state = false
+    self.modifiers.mute_state = false
+    self.modifiers.recarm_state = false
 end
 
 function Main_Window:request_focus()
@@ -206,6 +245,7 @@ end
 
 function Main_Window:process_shortcuts()
     self:on_escape_key(ImGui.Shortcut(self.ctx, ImGui.Key_Escape))
+    self:on_enter_key(ImGui.Shortcut(self.ctx, ImGui.Key_Enter))
 end
 
 local function make_main_window()
