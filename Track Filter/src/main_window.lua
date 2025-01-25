@@ -132,7 +132,10 @@ function Main_Window:callback()
 end
 
 function Main_Window:on_clear_button(is_button_pressed)
-    if is_button_pressed then self:clear_filters() end
+    if is_button_pressed then
+        self:clear_filters()
+        self:callback()
+    end
 end
 
 function Main_Window:on_escape_key(is_key_down)

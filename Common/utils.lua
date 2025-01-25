@@ -5,6 +5,8 @@ function utils.print(msg)
     if type(msg) == "nil" then msg = "nil"
     elseif type(msg) == "boolean" then
         if msg then msg = "true" else msg = "false" end
+    elseif type(msg) == "userdata" then
+        msg = tostring(msg)
     end
     reaper.ShowConsoleMsg(msg)
 end
@@ -23,7 +25,7 @@ end
 function utils.debug(msg)
     if not debug_mode then return end
     
-    if type(msg) =="table" then utils.print_table(msg)
+    if type(msg) == "table" then utils.print_table(msg)
     else utils.print(msg) end
 
 end

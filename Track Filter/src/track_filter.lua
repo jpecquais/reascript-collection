@@ -204,25 +204,23 @@ function Track_Filter:recursively_match_tracks_by_patterns(matching_function, st
 end
 
 function Track_Filter:post_filter(tracks)
-    if not self.modifiers.items_state and not self.modifiers.solo_state then return tracks, {} end
-
+    if not self.modifiers.items_state and not self.modifiers.solo_state and not self.modifiers.mute_state and not self.modifiers.recarm_state then return tracks, {} end
+    
     local matching_tracks, non_matching_tracks = tracks, {}
-    for i, tr in ipairs(matching_tracks) do
-        local tr_has_item = reaper.CountTrackMediaItems(tr) > 0 
-        local tr_is_solo = reaper.GetMediaTrackInfo_Value(tr,"I_SOLO") > 0
-        -- local tr_is_mute
-        -- local tr_is_recarm
+    local i = 1
+
+    while i <= #matching_tracks do
         
-        -- utils.debug(self.modifiers)
+        local tr = matching_tracks[i]
+        local tr_has_item = reaper.CountTrackMediaItems(tr) > 0 and self.modifiers.items_state
+        local tr_is_solo = reaper.GetMediaTrackInfo_Value(tr,"I_SOLO") > 0 and self.modifiers.solo_state
+        local tr_is_mute = reaper.GetMediaTrackInfo_Value(tr,"B_MUTE") > 0 and self.modifiers.mute_state
+        local tr_is_recarm = reaper.GetMediaTrackInfo_Value(tr,"I_RECARM") > 0 and self.modifiers.recarm_state
         
-        if (not tr_has_item and self.modifiers.items_state) or (not tr_is_solo and self.modifiers.solo_state) then
+        if tr_has_item or tr_is_solo or tr_is_mute or tr_is_recarm then
+            i = i + 1
+        else
             table.insert(non_matching_tracks,table.remove(matching_tracks,i))
-        -- elseif not tr_is_solo then 
-        --     table.insert(non_matching_tracks,table.remove(matching_tracks,i))
-        -- elseif not tr_is_mute then 
-        --     table.insert(non_matching_tracks,table.remove(matching_tracks,i))
-        -- elseif not tr_is_recarm then
-        --     table.insert(non_matching_tracks,table.remove(matching_tracks,i))
         end
     end
     return matching_tracks, non_matching_tracks
@@ -230,22 +228,6 @@ end
 
 -- Filter tracks based on patterns and update visibility
 function Track_Filter:filter_tracks(string_input)
-
-    -- local magic_patterns, residue_patterns = get_magic_patterns_from_patterns(patterns)
-
-    -- local matching_tracks, non_matching_tracks = {}, {}
-
-    -- if #magic_patterns>0 then
-    --     for _, magic_pattern in ipairs(magic_patterns) do
-    --         local magic_matching_tracks, non_magic_matching_track = {}, {}
-    --         if magic_pattern == "$SOLO"  then magic_matching_tracks, non_magic_matching_track = track_filter.recursively_match_tracks_by_patterns(track_filter.match_by_track_state("I_SOLO"),  false,false)
-    --         elseif magic_pattern == "$MUTE"  then magic_matching_tracks, non_magic_matching_track = track_filter.recursively_match_tracks_by_patterns(track_filter.match_by_track_state("B_MUTE"),  false,false)
-    --         elseif magic_pattern == "$REC"   then magic_matching_tracks, non_magic_matching_track = track_filter.recursively_match_tracks_by_patterns(track_filter.match_by_track_state("I_RECARM"),false,false)
-    --         elseif magic_pattern == "$ITEMS"  then magic_matching_tracks, non_magic_matching_track = track_filter.recursively_match_tracks_by_patterns(track_filter.match_by_track_has_items(),      false,false) end
-    --         matching_tracks = utils.join_tables(matching_tracks,magic_matching_tracks)
-    --         non_matching_tracks = utils.join_tables(non_matching_tracks,non_magic_matching_track)
-    --     end
-    -- end
     
     local patterns = utils.split_patterns(string_input)
     
