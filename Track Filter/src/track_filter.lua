@@ -223,7 +223,10 @@ function Track_Filter:post_filter(tracks)
             table.insert(non_matching_tracks,table.remove(matching_tracks,i))
         end
     end
-    return matching_tracks, non_matching_tracks
+    if next(matching_tracks) == nil then return tracks, {}
+    else
+        return matching_tracks, non_matching_tracks
+    end
 end
 
 -- Filter tracks based on patterns and update visibility
