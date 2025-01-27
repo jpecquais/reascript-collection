@@ -9,6 +9,8 @@
 --   The Track Filter script is a simple GUI based tool to show/hide tracks in MCP and TCP based on their name.
 --   It requires my script **Visible tracks fit TCP height** to work !
 
+--   **Note that you also need to install the common extension which also provides necessary functions.**
+
 --   ## TODO
 --   - [ ] Add options to affect TCP visiblity only
 --   - [ ] Add options to affect MCP visiblity only
