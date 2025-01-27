@@ -1,3 +1,10 @@
+-- @author JLP
+-- @version 25.01.27
+
+-- @description Visible tracks TCP height
+-- @changelog
+--     Initial release
+
 local function get_visible_tr_in_mcp()
     local num_tr = reaper.CountTracks(0)
     local visible_tr = {}

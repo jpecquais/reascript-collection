@@ -1,3 +1,9 @@
+-- @author JLP
+-- @version 25.01.27
+-- @description On key - enter
+-- @noindex
+-- NoIndex: true
+
 local window, segment, details = reaper.BR_GetMouseCursorContext()
 local context = {window,segment,details}
 

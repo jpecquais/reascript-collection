@@ -1,4 +1,9 @@
--- utils.lua
+-- @author JLP
+-- @version 25.01.27
+-- @description Utilities library
+-- @noindex
+-- NoIndex: true
+
 local utils = {}
 
 function utils.print(msg)

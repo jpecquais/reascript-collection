@@ -1,3 +1,6 @@
+-- @noindex
+-- NoIndex: true
+
 local navigation = {}
 
 function navigation.track_is_visible_in_mcp(tr)

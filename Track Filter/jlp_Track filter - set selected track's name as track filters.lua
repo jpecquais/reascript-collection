@@ -1,3 +1,11 @@
+-- @description Track filter: Push the selected track's name to text input of the track filter utility.
+-- @version 25.01.27
+-- @author JLP
+-- @changelog
+--     Initial release
+-- @noindex
+-- NoIndex: true
+
 
 local sel_tr = reaper.CountSelectedTracks(0)
 local filters = ""

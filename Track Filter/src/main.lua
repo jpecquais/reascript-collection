@@ -1,4 +1,7 @@
--- main.lua
+-- @noindex
+-- NoIndex: true
+
+-- main script
 
 reaper.set_action_options(1) -- if script is terminated, it is automatically relaunched.
 

@@ -1,7 +1,8 @@
---Script Name : Monitoring - Toggle HOA Source.lua
---Author : Jean Loup Pecquais
---Description : This is a toggle to set the monitoring source to HOA
---v1.0.0
+-- @author JLP
+-- @version 25.01.27
+-- @description Toggle to speaker pair output
+-- @noindex
+-- NoIndex: true
 
 local script = "monitoring.lua"
 local script_folder = debug.getinfo(1,'S').source:match[[^@?(.*[\\/])[^\\/]-$]]

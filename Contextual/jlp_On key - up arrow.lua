@@ -1,7 +1,8 @@
---Script Name : ArrowRight.lua
---Author : Jean Loup Pecquais
---Description : take care of right arrow action depending of context
---v1.0.0
+-- @author JLP
+-- @version 25.01.27
+-- @description On key - up arrow
+-- @noindex
+-- NoIndex: true
 
 local main_path = reaper.GetResourcePath()
 local script_path = main_path.."/Scripts/JLP Scripts"

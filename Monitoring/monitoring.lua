@@ -1,3 +1,6 @@
+-- @noindex
+-- NoIndex: true
+
 local module = {}
 
 local function set_button_state(sec, cmd, state)

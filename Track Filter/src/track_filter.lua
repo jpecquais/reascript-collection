@@ -1,11 +1,14 @@
--- track_filter.lua
+-- @noindex
+-- NoIndex: true
+
+-- track_filter
 
 -- Load utility functions
 local main_path = reaper.GetResourcePath()
 local script_path = main_path .. "/Scripts/JLP Scripts"
 local utils = dofile(script_path .. "/Common/utils.lua")
 local function tracks_fit_tcp()
-    dofile(script_path.."/View/jlp_Visible tracks fit TCP width.lua")
+    dofile(script_path.."/View/jlp_Visible tracks fit TCP height.lua")
 end
 
 -- table thas host specific patterns

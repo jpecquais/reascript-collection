@@ -1,3 +1,6 @@
+-- @noindex
+-- NoIndex: true
+
 --load ImGui
 package.path = reaper.ImGui_GetBuiltinPath() .. '/?.lua'
 local ImGui = require 'imgui' '0.9.3'
@@ -211,7 +214,7 @@ function Main_Window:draw()
     local visible, open = ImGui.Begin(self.ctx, 'Track filter', true)
     if visible then
         ImGui.Text(self.ctx, 'Track filter')
-        ImGui.SameLine(self.ctx)
+        -- ImGui.SameLine(self.ctx)
 
         local has_changed, new_value = ImGui.Checkbox(self.ctx, "items",self.modifiers.items_state)
         self:on_checkbox_has_changed(has_changed, new_value ,"items_state")
