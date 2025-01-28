@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="JLP Scripts" commit="2baefd8907bdfa7430d71a7e64c747c7774aa2f6">
+<index version="1" name="JLP Scripts" commit="0a504d75457fb06cf7f435b72860bd71f2806141">
   <category name="Common">
     <reapack name="library_includes.lua" type="script" desc="JLP - Common Scripts">
       <metadata>
@@ -99,7 +99,7 @@
     </reapack>
   </category>
   <category name="View">
-    <reapack name="jlp_Visible tracks fit TCP height.lua" type="script" desc="Visible tracks TCP height">
+    <reapack name="jlp_Visible tracks fit TCP height.lua" type="script" desc="Visible tracks fit TCP height">
       <version name="25.01.27" author="JLP" time="2025-01-27T17:35:03Z">
         <source main="main">https://github.com/jpecquais/reascript-collection/raw/362841f89e4f0922003164d252d1743e48830db0/View/jlp_Visible%20tracks%20fit%20TCP%20height.lua</source>
       </version>
