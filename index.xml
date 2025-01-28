@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="JLP Scripts" commit="362841f89e4f0922003164d252d1743e48830db0">
-  <category name="Common">
-    <reapack name="common.ext" type="extension" desc="JLP - Common Scripts">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Common\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 This package contains several libraries that are used inside my scripts. Its installation is mendatory to use any of my scripts.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Package description\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Utilitary - utils.lua\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 This file host some generic lua helper function.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Navigation - navigation.lua\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 This file host some function to move, select and navigate through elements (tracks, items, UI) inside REAPER.\par}
-}
-]]></description>
-      </metadata>
-      <version name="25.01.27" author="JLP" time="2025-01-27T17:35:03Z">
-        <source main="main" type="script" file="utils.lua">https://github.com/jpecquais/reascript-collection/raw/362841f89e4f0922003164d252d1743e48830db0/Common/utils.lua</source>
-        <source main="main" type="script" file="../Navigation/lib/navigation.lua">https://github.com/jpecquais/reascript-collection/raw/362841f89e4f0922003164d252d1743e48830db0/Navigation/lib/navigation.lua</source>
-      </version>
-    </reapack>
-  </category>
+<index version="1" name="JLP Scripts" commit="19a260463d310f5af9993f14aff94c4f8cc5ece9">
   <category name="Navigation">
     <reapack name="jlp_Move selected tracks down (make prev. track folder).lua" type="script" desc="Move selected tracks down (make prev. track folder)">
       <version name="25.01.27" author="JLP" time="2025-01-27T17:35:03Z">
@@ -74,14 +51,43 @@
     </reapack>
   </category>
   <category name="Track Filter">
+    <reapack name="jlp_Track filter - focus search bar.lua" type="script" desc="Track filter: Focus the text input of the Track filter.">
+      <version name="25.01.27" author="JLP" time="2025-01-28T07:03:37Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/jpecquais/reascript-collection/raw/19a260463d310f5af9993f14aff94c4f8cc5ece9/Track%20Filter/jlp_Track%20filter%20-%20focus%20search%20bar.lua</source>
+      </version>
+    </reapack>
+    <reapack name="jlp_Track filter - set selected track's name as track filters.lua" type="script" desc="Track filter: Push the selected track's name to text input of the track filter utility.">
+      <version name="25.01.27" author="JLP" time="2025-01-28T07:03:37Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/jpecquais/reascript-collection/raw/19a260463d310f5af9993f14aff94c4f8cc5ece9/Track%20Filter/jlp_Track%20filter%20-%20set%20selected%20track's%20name%20as%20track%20filters.lua</source>
+      </version>
+    </reapack>
     <reapack name="jlp_Track filter.lua" type="script" desc="Track filter">
       <version name="25.01.27" author="JLP" time="2025-01-27T17:35:03Z">
         <source main="main">https://github.com/jpecquais/reascript-collection/raw/362841f89e4f0922003164d252d1743e48830db0/Track%20Filter/jlp_Track%20filter.lua</source>
       </version>
     </reapack>
   </category>
+  <category name="Track Filter/src">
+    <reapack name="main.lua" type="script">
+      <version name="25.01.27" author="JLP" time="2025-01-28T07:03:37Z">
+        <source main="main">https://github.com/jpecquais/reascript-collection/raw/19a260463d310f5af9993f14aff94c4f8cc5ece9/Track%20Filter/src/main.lua</source>
+      </version>
+    </reapack>
+    <reapack name="main_window.lua" type="script">
+      <version name="25.01.27" author="JLP" time="2025-01-28T07:03:37Z">
+        <source main="main">https://github.com/jpecquais/reascript-collection/raw/19a260463d310f5af9993f14aff94c4f8cc5ece9/Track%20Filter/src/main_window.lua</source>
+      </version>
+    </reapack>
+    <reapack name="track_filter.lua" type="script">
+      <version name="25.01.27" author="JLP" time="2025-01-28T07:03:37Z">
+        <source main="main">https://github.com/jpecquais/reascript-collection/raw/19a260463d310f5af9993f14aff94c4f8cc5ece9/Track%20Filter/src/track_filter.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="View">
-    <reapack name="jlp_Visible tracks fit TCP height.lua" type="script">
+    <reapack name="jlp_Visible tracks fit TCP height.lua" type="script" desc="Visible tracks TCP height">
       <version name="25.01.27" author="JLP" time="2025-01-27T17:35:03Z">
         <source main="main">https://github.com/jpecquais/reascript-collection/raw/362841f89e4f0922003164d252d1743e48830db0/View/jlp_Visible%20tracks%20fit%20TCP%20height.lua</source>
       </version>
