@@ -3,8 +3,6 @@
 -- @author JLP
 -- @changelog
 --     Initial release
--- @noindex
--- NoIndex: true
 
 
 local sel_tr = reaper.CountSelectedTracks(0)

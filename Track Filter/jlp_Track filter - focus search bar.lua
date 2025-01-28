@@ -3,7 +3,5 @@
 -- @author JLP
 -- @changelog
 --     Initial release
--- @noindex
--- NoIndex: true
 
 reaper.SetExtState("jlp_Track filter","request_focus","true",false)

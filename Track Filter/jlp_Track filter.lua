@@ -22,11 +22,11 @@
 -- @changelog
 --     Initial release
 -- @provides
---     jlp_Track filter - focus search bar.lua
---     jlp_Track filter - set selected track's name as track filters.lua
---     ./src/main_window.lua
---     ./src/main.lua
---     ./src/track_filter.lua
+--     [script main] ./jlp_Track filter - focus search bar.lua
+--     [script main] ./jlp_Track filter - set selected track's name as track filters.lua
+--     [script nomain] ./src/main_window.lua
+--     [script nomain] ./src/main.lua
+--     [script nomain] ./src/track_filter.lua
 
 local main_path = reaper.GetResourcePath()
 local script_path = main_path .. "/Scripts/JLP Scripts"

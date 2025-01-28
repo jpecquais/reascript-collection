@@ -2,7 +2,6 @@
 -- @version 25.01.27
 -- @description Insert paste items
 -- @noindex
--- NoIndex: true
 
 local start, finish = reaper.GetSet_LoopTimeRange(false, false, 0, 0, false)
 local flag = 0

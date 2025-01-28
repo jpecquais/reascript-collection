@@ -2,7 +2,6 @@
 -- @version 25.01.27
 -- @description On key - right arrow
 -- @noindex
--- NoIndex: true
 
 local main_path = reaper.GetResourcePath()
 local script_path = main_path.."/Scripts/JLP Scripts"

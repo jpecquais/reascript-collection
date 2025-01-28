@@ -2,7 +2,6 @@
 -- @version 25.01.27
 -- @description Toggle to heaphones output
 -- @noindex
--- NoIndex: true
 
 local script = "monitoring.lua"
 local script_folder = debug.getinfo(1,'S').source:match[[^@?(.*[\\/])[^\\/]-$]]

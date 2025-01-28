@@ -1,5 +1,5 @@
--- @noindex
--- NoIndex: true
+-- @version 25.01.27
+-- @author JLP
 
 --load ImGui
 package.path = reaper.ImGui_GetBuiltinPath() .. '/?.lua'

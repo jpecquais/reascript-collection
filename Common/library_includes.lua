@@ -2,8 +2,9 @@
 @version 25.01.27
 @author JLP
 @provides
-    [script main=main] ./*.lua
-    [script main=main] ../Navigation/lib/navigation.lua
+    [nomain] .
+    [script nomain] ./*.lua
+    [script nomain] ../Navigation/lib/navigation.lua
 @about
     # Common
 
