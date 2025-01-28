@@ -15,7 +15,9 @@
 --   # Known issue
 -- @changelog
 --     Initial release
+-- @metapackage
 -- @provides
+--     [main] .
 --     [script main] jlp_Track filter - focus search bar.lua
 --     [script main] jlp_Track filter - set selected track's name as track filters.lua
 --     [script nomain] src/main_window.lua

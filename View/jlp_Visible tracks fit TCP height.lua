@@ -1,6 +1,6 @@
 -- @author JLP
 -- @version 25.01.27
--- @description Visible tracks TCP height
+-- @description Visible tracks fit TCP height
 -- @changelog
 --     Initial release
 
