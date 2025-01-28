@@ -1,5 +1,6 @@
 -- @version 25.01.27
 -- @author JLP
+-- @noindex
 
 --load ImGui
 package.path = reaper.ImGui_GetBuiltinPath() .. '/?.lua'

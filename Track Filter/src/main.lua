@@ -1,11 +1,12 @@
 -- @version 25.01.27
 -- @author JLP
+-- @noindex
 
 -- main script
 
 reaper.set_action_options(1) -- if script is terminated, it is automatically relaunched.
 
-debug_mode = true
+debug_mode = false
 
 local main_path = reaper.GetResourcePath()
 local script_path = main_path .. "/Scripts/JLP Scripts"

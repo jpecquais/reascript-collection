@@ -1,8 +1,8 @@
 @description JLP - Common Scripts
 @version 25.01.27
 @author JLP
+@metapackage
 @provides
-    [nomain] .
     [script nomain] ./*.lua
     [script nomain] ../Navigation/lib/navigation.lua
 @about
