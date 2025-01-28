@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="JLP Scripts" commit="d6c942620d955bbba775302be7b1af14ac36cec8">
+<index version="1" name="JLP Scripts" commit="4de1c722da5ba27f518ec6cbf0945a0d6c794db0">
   <category name="Common">
     <reapack name="library_includes.lua" type="script" desc="JLP - Common Scripts">
       <metadata>
@@ -75,9 +75,33 @@
     </reapack>
   </category>
   <category name="Track Filter">
-    <reapack name="jlp_Track filter.lua" type="script" desc="Track filter">
-      <version name="25.01.27" author="JLP" time="2025-01-27T17:35:03Z">
-        <source main="main">https://github.com/jpecquais/reascript-collection/raw/362841f89e4f0922003164d252d1743e48830db0/Track%20Filter/jlp_Track%20filter.lua</source>
+    <reapack name="track_filter_package.lua" type="script" desc="Track filter">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Track Filter\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Description\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The Track Filter script is a simple GUI based tool to show/hide tracks in MCP and TCP based on their name. It requires my script {\b Visible tracks fit TCP height} to work ! {\b Note that you also need to install the common extension which also provides necessary functions.}\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 TODO\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab [ ] Add options to affect TCP visiblity only\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab [ ] Add options to affect MCP visiblity only\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab [ ] Add options to show parent tracks of match tracks (currently on)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab [ ] Add options to show children tracks of match tracks (currently on)\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Known issue\par}
+}
+]]></description>
+      </metadata>
+      <version name="25.01.27" author="JLP" time="2025-01-28T14:39:48Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main" type="script" file="jlp_Track filter - focus search bar.lua">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/jlp_Track%20filter%20-%20focus%20search%20bar.lua</source>
+        <source main="main" type="script" file="jlp_Track filter - set selected track's name as track filters.lua">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/jlp_Track%20filter%20-%20set%20selected%20track's%20name%20as%20track%20filters.lua</source>
+        <source main="main" type="script" file="jlp_Track filter.lua">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/jlp_Track%20filter.lua</source>
+        <source main="main" type="script">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/track_filter_package.lua</source>
+        <source type="script" file="src/main.lua">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/src/main.lua</source>
+        <source type="script" file="src/main_window.lua">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/src/main_window.lua</source>
+        <source type="script" file="src/track_filter.lua">https://github.com/jpecquais/reascript-collection/raw/4de1c722da5ba27f518ec6cbf0945a0d6c794db0/Track%20Filter/src/track_filter.lua</source>
       </version>
     </reapack>
   </category>
