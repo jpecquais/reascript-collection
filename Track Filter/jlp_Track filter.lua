@@ -1,6 +1,16 @@
 -- @author JLP
 -- @version 25.01.27
 -- @description Track filter
+-- @changelog
+--     Initial release
+-- @metapackage
+-- @provides
+--     [main] .
+--     [script main] jlp_Track filter - focus search bar.lua
+--     [script main] jlp_Track filter - set selected track's name as track filters.lua
+--     [script nomain] src/main_window.lua
+--     [script nomain] src/main.lua
+--     [script nomain] src/track_filter.lua
 -- @about
 --   # Track Filter
 --   ## Description
@@ -13,16 +23,6 @@
 --   - [ ] Add options to show parent tracks of match tracks (currently on)
 --   - [ ] Add options to show children tracks of match tracks (currently on)
 --   # Known issue
--- @changelog
---     Initial release
--- @metapackage
--- @provides
---     [main] .
---     [script main] jlp_Track filter - focus search bar.lua
---     [script main] jlp_Track filter - set selected track's name as track filters.lua
---     [script nomain] src/main_window.lua
---     [script nomain] src/main.lua
---     [script nomain] src/track_filter.lua
 
 local main_path = reaper.GetResourcePath()
 local script_path = main_path .. "/Scripts/JLP Scripts"
